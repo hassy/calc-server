@@ -12,9 +12,9 @@ Your tasks are:
 
 Suggested steps:
 
-1. Generate some load on the server with Minigun and observe changes in memory usage. A sample Minigun test script is provided in [test.json](test.json). Feel
+1. Generate some load on the server with [Artillery](https://artillery.io) and observe changes in memory usage. A sample Artillery test script is provided in [test.json](test.json). Feel
 free to tweak it (e.g. extend the scenario with more operations).
-  - `minigun run test.json`
+  - `artillery run test.json`
 2. Confirm that memory usage is growing under load, and that memory is not reclaimed by the GC.
   - Use `top` to monitor memory usage
     - `top -pid $(pgrep -lfa node | grep server.js | awk '{print $1}')`
